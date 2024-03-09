@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('date_posted', models.DateTimeField(auto_now_add=True)),
                 ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shelter.post')),
             ],
         ),
         migrations.CreateModel(
