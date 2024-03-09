@@ -30,6 +30,7 @@ class Pet(models.Model):
     age = models.IntegerField()
     weight = models.CharField(max_length=100)
     illness = models.CharField(max_length=100)
+    breed = models.CharField(max_length=100, default='Unknown')
 
     def __str__(self):
         return self.name
