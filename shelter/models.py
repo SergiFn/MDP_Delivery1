@@ -44,3 +44,6 @@ class Adopt(models.Model):
 
     def __str__(self):
         return self.pet.name
+
+
+ 
