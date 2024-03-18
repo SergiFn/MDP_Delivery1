@@ -1,0 +1,9 @@
+<h1>Name: {{ pet.name }}</h1>
+<p>Age: {{ pet.age }}</p>
+<p>Type: {{ pet.animal_type }}</p>
+<p>Weight: {{ pet.weight }}</p>
+<p>Illness? {{ pet.illness }}</p>
+<h2>Adoptions</h2>
+{% for adoption in pet.adopt_set.all %}
+ <p>{{ adoption.content }}</p>
+{% endfor %}
