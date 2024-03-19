@@ -27,3 +27,11 @@ def list_pets(request):
 def pet_detail(request, pk):
     pet = get_object_or_404(Pet, pk=pk)
     return render(request, 'pet_detail.html', {'pet': pet})
+
+"""def login(request):
+
+    return render(request, 'registration/login.html')
+
+def password_reset(request):
+
+    return render(request, 'registration/password_reset.html')"""
