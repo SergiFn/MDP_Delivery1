@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import PetForm
 from .models import Pet
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
@@ -28,10 +30,3 @@ def pet_detail(request, pk):
     pet = get_object_or_404(Pet, pk=pk)
     return render(request, 'pet_detail.html', {'pet': pet})
 
-"""def login(request):
-
-    return render(request, 'registration/login.html')
-
-def password_reset(request):
-
-    return render(request, 'registration/password_reset.html')"""

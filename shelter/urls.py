@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import path, include
 from shelter.views import home_page, create_pet, pet_detail, list_pets
 
