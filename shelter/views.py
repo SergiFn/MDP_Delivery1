@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 def home_page(request):
     return render(request, 'home.html')
 
-
+@login_required
 def create_pet(request):
     if request.method == 'POST':
         form = PetForm(request.POST)
@@ -30,3 +30,8 @@ def pet_detail(request, pk):
     pet = get_object_or_404(Pet, pk=pk)
     return render(request, 'pet_detail.html', {'pet': pet})
 
+def contact(request):
+    return render(request, 'contact.html')
+
+def about_us(request):
+    return render(request, 'about_us.html')

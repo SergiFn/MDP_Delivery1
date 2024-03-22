@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shelter</title>
-</head>
-<body>
+{%  extends 'base.html' %}
 
-    <h1>Home page</h1>
+{% block content %}
+
     
     {% if user.is_authenticated %}
         Hi {{ user.username }}!
@@ -26,5 +21,5 @@
     <p>
         <a href={% url 'list_pets' %}>List of pets from the shelter </a>
     </p>
-</body>
-</html>
+    
+{%  endblock %}

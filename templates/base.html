@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shelter</title>
+</head>
+<body>
+
+    <ul>
+         <a href={% url 'home' %}>HOME</a>
+         <a href={% url 'contact' %}>CONTACT</a>
+         <a href={% url 'about_us' %}>ABOUT US</a>
+        
+    </ul>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
