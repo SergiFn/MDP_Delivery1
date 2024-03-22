@@ -2,6 +2,36 @@
 
 {% block content %}
     
-    <h1>Shelter Contact</h1>
+    <style>
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+    
+    <div class="center-content">
+    
+        <h1>Shelter Contact</h1>
+        
+        <form action="/contact/" method="POST"> {% csrf_token %}
+            
+            <p>Name: <input type="text" name="name"> </p>
+            <p>Affair: <input type="text" name="affair"> </p>
+            <p>Email: <input type="text" name="email"> </p>
+        
+            <p>Message: <textarea name="message" rows="15" cols="40"> </textarea> </p>
+        
+            
+            <input type="submit" value="Send">
+            
+            
+            
+        </form>
+    
+    </div>
 
 {%  endblock %}

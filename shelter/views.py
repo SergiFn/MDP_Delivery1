@@ -31,6 +31,11 @@ def pet_detail(request, pk):
     return render(request, 'pet_detail.html', {'pet': pet})
 
 def contact(request):
+
+    if request.method == 'POST':
+
+        return render(request, 'thanks.html')
+
     return render(request, 'contact.html')
 
 def about_us(request):

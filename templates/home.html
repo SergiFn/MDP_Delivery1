@@ -1,19 +1,9 @@
 {%  extends 'base.html' %}
 
 {% block content %}
-
     
-    {% if user.is_authenticated %}
-        Hi {{ user.username }}!
-        <form action="{% url 'logout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Log Out</button>
-        </form>
-    {% else %}
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a>
-    {% endif %}
-
+    
+    <h1>Home</h1>
     
     <p>
         <a href={% url 'create_pet' %}>Add pet to shelter</a>

@@ -1,0 +1,12 @@
+.tab-space {
+    margin-right: 2em;
+}
+
+.center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+}

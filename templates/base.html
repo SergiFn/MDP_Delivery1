@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Shelter</title>
+    
+
 </head>
 <body>
 
     <ul>
-         <a href={% url 'home' %}>HOME</a>
-         <a href={% url 'contact' %}>CONTACT</a>
-         <a href={% url 'about_us' %}>ABOUT US</a>
-        
+         <a  href={% url 'home' %}>HOME</a>
+         <a  href={% url 'contact' %}>CONTACT</a>
+         <a  href={% url 'about_us' %}>ABOUT US</a>
+
+        {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <!--<button type="submit">Log Out</button>-->
+            <button type="submit">Log Out</button>
+            </form>
+        {% else %}
+            <a  href="{% url 'login' %}">Log In</a>
+        {% endif %}
+
     </ul>
 
     {% block content %}
