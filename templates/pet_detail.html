@@ -1,3 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
 <h1>Name: {{ pet.name }}</h1>
 <p>Age: {{ pet.age }}</p>
 <p>Type: {{ pet.animal_type }}</p>
@@ -7,3 +12,6 @@
 {% for adoption in pet.adopt_set.all %}
  <p>{{ adoption.content }}</p>
 {% endfor %}
+
+{% endblock %}
+```
