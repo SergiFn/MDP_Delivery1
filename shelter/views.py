@@ -4,11 +4,11 @@ from .models import Pet
 from django.contrib.auth.decorators import login_required
 
 
-
 # Create your views here.
 
 def home_page(request):
     return render(request, 'home.html')
+
 
 @login_required
 def create_pet(request):
@@ -32,13 +32,13 @@ def pet_detail(request, pk):
     pet = get_object_or_404(Pet, pk=pk)
     return render(request, 'pet_detail.html', {'pet': pet})
 
+
 def contact(request):
-
     if request.method == 'POST':
-
         return render(request, 'confirmations/thanks_contact.html')
 
     return render(request, 'contact.html')
+
 
 def about_us(request):
     return render(request, 'about_us.html')
