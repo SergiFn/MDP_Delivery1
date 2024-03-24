@@ -1,29 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
     <title>Shelter</title>
-    
 
 </head>
 <body>
 
-    <ul>
-         <a  href={% url 'home' %}>HOME</a>
-         <a  href={% url 'contact' %}>CONTACT</a>
-         <a  href={% url 'about_us' %}>ABOUT US</a>
-
-        {% if user.is_authenticated %}
-            <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <!--<button type="submit">Log Out</button>-->
-            <button type="submit">Log Out</button>
-            </form>
-        {% else %}
-            <a  href="{% url 'login' %}">Log In</a>
-        {% endif %}
-
-    </ul>
+    <header>
+        
+        <nav>
+            
+            <label for="" class="logo">
+                <a href=""><img src="/static/logo.png"></a>
+            </label>
+            <ul>
+                <li><a  href={% url 'home' %}>HOME</a></li>
+                 <li><a  href={% url 'contact' %}>CONTACT</a></li>
+                 <li><a  href={% url 'about_us' %}>ABOUT US</a></li>
+        
+               <li> {% if user.is_authenticated %}
+                    <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <!--<button type="submit">Log Out</button>-->
+                    <button type="submit">Log Out</button>
+                    </form>
+                {% else %}
+                    <a  href="{% url 'login' %}">Log In</a>
+                {% endif %}</li>
+        
+            </ul>
+        </nav>
+    </header>
 
     {% block content %}
     {% endblock %}
