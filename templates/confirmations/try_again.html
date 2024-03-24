@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Shelter</title>
-    <style>
+<style>
         .center-content {
             display: flex;
             flex-direction: column;
@@ -13,16 +13,21 @@
             text-align: center;
         }
     </style>
+    
 </head>
 <body>
 
-    <div class="center-content">
-        <h3 style="color: green">Thank you for contact with Shelter!! We will contact you soon!! </h3>
-    
-        <p>
-            <a href={% url 'home' %} > Return Home</a>
-        </p>
-    </div>
+         <div class="center-content">
+            <h3 style="color: green">We didn't add your pet!!</h3>
+        
+            <p>
+                <a href={% url 'home' %} > Return Home</a>
+                
+            </p>
+                 <p>
+                     <a href={% url 'create_pet' %} > Try again</a>
+                 </p>
+        </div>
 
 </body>
 </html>

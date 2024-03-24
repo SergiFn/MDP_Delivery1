@@ -16,6 +16,8 @@ def create_pet(request):
         form = PetForm(request.POST)
         if form.is_valid():
             form.save()
+            return render(request, 'confirmations/confirmation_create_pet.html')
+
     else:
         form = PetForm()
     return render(request, 'create_pet.html', {'form': form})
@@ -34,7 +36,7 @@ def contact(request):
 
     if request.method == 'POST':
 
-        return render(request, 'thanks.html')
+        return render(request, 'confirmations/thanks_contact.html')
 
     return render(request, 'contact.html')
 
