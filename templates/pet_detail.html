@@ -8,10 +8,4 @@
 <p>Type: {{ pet.animal_type }}</p>
 <p>Weight: {{ pet.weight }}</p>
 <p>Illness? {{ pet.illness }}</p>
-<h2>Adoptions</h2>
-{% for adoption in pet.adopt_set.all %}
- <p>{{ adoption.content }}</p>
-{% endfor %}
-
 {% endblock %}
-```

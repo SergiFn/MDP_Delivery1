@@ -8,29 +8,24 @@
 
 </head>
 <body>
-
     <header>
-        
         <nav>
-            
             <label for="" class="logo">
-                <a href=""><img src="/static/logo.png"></a>
+                <img src="/static/logo.png" alt="Shelter logo">
             </label>
             <ul>
                 <li><a  href={% url 'home' %}>HOME</a></li>
-                 <li><a  href={% url 'contact' %}>CONTACT</a></li>
-                 <li><a  href={% url 'about_us' %}>ABOUT US</a></li>
-        
-               <li> {% if user.is_authenticated %}
+                <li><a  href={% url 'contact' %}>CONTACT</a></li>
+                <li><a  href={% url 'about_us' %}>ABOUT US</a></li>
+                <li> {% if user.is_authenticated %}
                     <form action="{% url 'logout' %}" method="post">
-                    {% csrf_token %}
-                    <!--<button type="submit">Log Out</button>-->
-                    <button type="submit">Log Out</button>
+                        {% csrf_token %}
+                        <button type="submit">LOG OUT</button>
                     </form>
-                {% else %}
-                    <a  href="{% url 'login' %}">Log In</a>
-                {% endif %}</li>
-        
+                    {% else %}
+                        <a  href="{% url 'login' %}">LOG IN</a>
+                    {% endif %}
+                </li>
             </ul>
         </nav>
     </header>

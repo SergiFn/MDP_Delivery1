@@ -4,13 +4,18 @@
 {% block content %}
     
     
-    <h1>Home</h1>
-    
-    <p>
-        <a href={% url 'create_pet' %}>Add pet to shelter</a>
-    </p>
-    <p>
-        <a href={% url 'list_pets' %}>List of pets from the shelter </a>
-    </p>
+    <h1>Shelter</h1>
+
+    <div>
+        <p>
+            <a href={% url 'create_pet' %}>Add pet to shelter</a>
+        </p>
+        <p>
+            <a href={% url 'list_pets' %}>List of pets from the shelter </a>
+        </p>
+        <p>
+            <a href={% url 'adopt_pet' %}>Adopt a pet</a>
+        </p>
+    </div>
     
 {%  endblock %}

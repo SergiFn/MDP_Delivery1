@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Add pet</title>
-    
     <style>
         .center-content {
             display: flex;
@@ -17,18 +16,15 @@
     
 </head>
 <body>
-
-         <div class="center-content">
-            <h3 style="color: green">Your pet has been added correctly!!</h3>
-        
-            <p>
-                <a href={% url 'home' %} > Return Home</a>
-                
-            </p>
-                 <p>
-                     <a href={% url 'create_pet' %} > Add new pet</a>
-                 </p>
-        </div>
+     <div class="center-content">
+        <h3 style="color: green">Your pet has been added correctly!!</h3>
+        <p>
+            <a href={% url 'home' %} > Return Home</a>
+        </p>
+         <p>
+             <a href={% url 'create_pet' %} > Add new pet</a>
+         </p>
+    </div>
 
 </body>
 </html>
