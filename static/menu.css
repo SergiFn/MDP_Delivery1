@@ -19,6 +19,7 @@ h1{
     font-size: 45px;
     color: black;
     margin: 10px;
+    text-align: center;
 }
 
 div{
@@ -79,7 +80,6 @@ button:hover {
     justify-content: space-between;
     margin: 20px 20px;
     padding: 2%;
-    border: 2px solid green;
 }
 
 .pet-name{
@@ -93,4 +93,65 @@ button:hover {
     font-size: 16px;
     padding: 5px;
     text-align: center;
+}
+
+.list-pets{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 20px;
+    padding: 1%;
+}
+
+input[type="text"], input[type="number"], input[type="password"], textarea, select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container{
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 20px;
+    margin-right: 5%;
+    text-align: left;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+    width: 40%;
+    margin: auto;
+}
+
+.login {
+
 }
