@@ -2,19 +2,20 @@
 
 {% block content %}
 
+    <h1>Adopted pets</h1>
 {% for adopt in adopts %}
     <div class="adopted">
-        <p>
-            Adopted pet name: {{ adopt.pet.name }}
+        <h3 class="pet-name">
+            {{ adopt.pet.name }}
+        </h3>
+        <p class="pet-data">
+            <b> Adoption date: </b> {{ adopt.date }}
         </p>
-        <p>
-            Adoption date: {{ adopt.date }}
+        <p class="pet-data">
+            <b> Worker name:</b> {{ adopt.worker.name }}
         </p>
-        <p>
-            Worker name: {{ adopt.worker.name }}
-        </p>
-        <p>
-            Adopter name: {{ adopt.customer.name }}
+        <p class="pet-data">
+            <b> Adopter name:</b> {{ adopt.customer.name }}
         </p>
     </div>
 {% endfor %}

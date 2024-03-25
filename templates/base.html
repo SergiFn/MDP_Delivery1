@@ -14,16 +14,16 @@
                 <img src="/static/logo.png" alt="Shelter logo">
             </label>
             <ul>
-                <li><a  href={% url 'home' %}>HOME</a></li>
-                <li><a  href={% url 'contact' %}>CONTACT</a></li>
-                <li><a  href={% url 'about_us' %}>ABOUT US</a></li>
+                <li><a href={% url 'home' %}>HOME</a></li>
+                <li><a href={% url 'contact' %}>CONTACT</a></li>
+                <li><a href={% url 'about_us' %}>ABOUT US</a></li>
                 <li> {% if user.is_authenticated %}
                     <form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
                         <button type="submit">LOG OUT</button>
                     </form>
                     {% else %}
-                        <a  href="{% url 'login' %}">LOG IN</a>
+                        <a href="{% url 'login' %}">LOG IN</a>
                     {% endif %}
                 </li>
             </ul>
