@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .forms import PetForm
+from .forms import PetForm, AdoptForm
 from .models import Pet
 from django.contrib.auth.decorators import login_required
 
@@ -31,6 +31,19 @@ def list_pets(request):
 def pet_detail(request, pk):
     pet = get_object_or_404(Pet, pk=pk)
     return render(request, 'pet_detail.html', {'pet': pet})
+
+
+@login_required
+def adopt_pet(request):
+    if request.method == 'POST':
+        form = AdoptForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'confirmations/confirmation_adopt_pet.html')
+
+    else:
+        form = AdoptForm()
+    return render(request, 'adopt_pet.html', {'form': form})
 
 
 def contact(request):

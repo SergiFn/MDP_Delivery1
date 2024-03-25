@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add pet</title>
+    <style>
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+     <div class="center-content">
+        <h3 style="color: green">Your pet has been adopted correctly!!</h3>
+        <p>
+            <a href={% url 'home' %} > Return Home</a>
+        </p>
+         <p>
+             <a href={% url 'adopt_pet' %} > Adopt another pet</a>
+         </p>
+    </div>
+</body>
+</html>
