@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for adopt in adopts %}
+    <div class="adopted">
+        <p>
+            Adopted pet name: {{ adopt.pet.name }}
+        </p>
+        <p>
+            Adoption date: {{ adopt.date }}
+        </p>
+        <p>
+            Worker name: {{ adopt.worker.name }}
+        </p>
+        <p>
+            Adopter name: {{ adopt.customer.name }}
+        </p>
+    </div>
+{% endfor %}
+
+{% endblock %}

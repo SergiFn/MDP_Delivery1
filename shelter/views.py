@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import PetForm, AdoptForm
-from .models import Pet
+from .models import Pet, Adopt
 from django.contrib.auth.decorators import login_required
 
 
@@ -44,6 +44,11 @@ def adopt_pet(request):
     else:
         form = AdoptForm()
     return render(request, 'adopt_pet.html', {'form': form})
+
+
+def list_adopted_pets(request):
+    adopts = Adopt.objects.all()
+    return render(request, 'list_adopted_pets.html', {'adopts': adopts})
 
 
 def contact(request):
