@@ -8,10 +8,13 @@
     <title>Adopt Pet - Shelter</title>
 </head>
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Adopt">
-    </form>
+    <div class="container">
+        <h1>Add Pet</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Adopt">
+        </form>
+    </div>
 {% endblock %}
 </html>

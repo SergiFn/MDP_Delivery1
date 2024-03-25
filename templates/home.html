@@ -2,22 +2,20 @@
 {%  extends 'base.html' %}
 
 {% block content %}
-    
-    
-    <h1>Shelter</h1>
+    <h1>Welcome to the pet shelter</h1>
 
-    <div>
+    <div class="main-container">
         <p>
-            <a href={% url 'create_pet' %}>Add pet to shelter</a>
+            <a class="function" href={% url 'create_pet' %}>Add pet to shelter</a>
         </p>
         <p>
-            <a href={% url 'list_pets' %}>List of pets from the shelter </a>
+            <a class="function" href={% url 'list_pets' %}>List of pets from the shelter </a>
         </p>
         <p>
-            <a href={% url 'adopt_pet' %}>Adopt a pet</a>
+            <a class="function" href={% url 'adopt_pet' %}>Adopt a pet</a>
         </p>
         <p>
-            <a href={% url 'list_adopted_pets' %}>List of adopted pets</a>
+            <a class="function" href={% url 'list_adopted_pets' %}>List of adopted pets</a>
         </p>
     </div>
     

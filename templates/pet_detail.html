@@ -2,10 +2,11 @@
 
 {% block content %}
 
-
-<h1>Name: {{ pet.name }}</h1>
-<p>Age: {{ pet.age }}</p>
-<p>Type: {{ pet.animal_type }}</p>
-<p>Weight: {{ pet.weight }}</p>
-<p>Illness? {{ pet.illness }}</p>
+<div class="adopted">
+    <h1>{{ pet.name }}</h1>
+    <p class="pet-data"><b>Age:</b> {{ pet.age }}</p>
+    <p class="pet-data"><b>Type: </b>{{ pet.animal_type }}</p>
+    <p class="pet-data"><b>Weight: </b>{{ pet.weight }}</p>
+    <p class="pet-data"><b>Illness? </b>{{ pet.illness }}</p>
+</div>
 {% endblock %}

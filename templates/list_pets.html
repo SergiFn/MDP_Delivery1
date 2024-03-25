@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <h1>List of pets adopted by the Shelter</h1>
 {% for pet in pets %}
-    <p>
-        <a href={% url 'pet_detail' pet.id %}>{{ pet.name }}</a>
-    </p>
+    <div class="adopted">
+        <h3 class="pet-name">{{ pet.name }}</h3>
+        <p class="list-pets">
+            <a href={% url 'pet_detail' pet.id %}>Info</a>
+        </p>
+    </div>
 {% endfor %}
 
 {% endblock %}
