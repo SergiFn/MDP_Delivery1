@@ -152,6 +152,32 @@ label {
     margin: auto;
 }
 
-.login {
+.about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+    height: 50%;
+}
 
+.about-us-list{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.about-us p{
+    font-size: 16px;
+    padding: 5px;
+    text-align: left;
+}
+
+.about-us h3 {
+    font-size: 25px;
+    color: black;
+    margin: 20px;
+    text-align: left;
 }
