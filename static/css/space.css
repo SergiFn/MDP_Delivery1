@@ -2,11 +2,33 @@
     margin-right: 2em;
 }
 
-.center-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+/* Estilos para el contenedor principal */
+.about {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 50px; /* Añadir un espacio alrededor del contenido */
+    text-align: center;
+
 }
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.about-text {
+   font-size: 16px;
+    line-height: 1.5;
+    color: #050404;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
