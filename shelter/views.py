@@ -38,7 +38,10 @@ def adopt_pet(request):
     if request.method == 'POST':
         form = AdoptForm(request.POST)
         if form.is_valid():
-            form.save()
+            adoption = form.save()
+            pet = adoption.pet
+            pet.is_adopted = True
+            pet.save()
             return render(request, 'confirmations/confirmation_adopt_pet.html')
 
     else:

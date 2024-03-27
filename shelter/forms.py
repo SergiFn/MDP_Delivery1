@@ -18,7 +18,7 @@ class PetForm(forms.ModelForm):
 
 
 class AdoptForm(forms.Form):
-    pet = forms.ModelChoiceField(queryset=Pet.objects.all())
+    pet = forms.ModelChoiceField(queryset=Pet.objects.filter(is_adopted=False))
     date = forms.DateField(input_formats=['%d/%m/%Y'])
     worker = forms.ModelChoiceField(queryset=Worker.objects.all())
     customer = forms.ModelChoiceField(queryset=Customer.objects.all())
@@ -31,3 +31,4 @@ class AdoptForm(forms.Form):
         data = self.cleaned_data
         adopt = Adopt.objects.create(pet=data['pet'], date=data['date'], worker=data['worker'], customer=data['customer'])
         adopt.save()
+        return adopt

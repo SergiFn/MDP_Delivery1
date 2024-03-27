@@ -45,6 +45,7 @@ class Pet(models.Model):
     weight = models.IntegerField()
     illness = models.CharField(max_length=100, choices=ILLNESS_CHOICES, default='Healthy')
     breed = models.CharField(max_length=100, default='Unknown')
+    is_adopted = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
