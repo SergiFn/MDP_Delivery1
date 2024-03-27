@@ -46,7 +46,7 @@ Execute the following command to start the server
 python manage.py runserver
 ```
 
-Then, open your browser and go to the [localhost](http://127.0.0.1:8080/) url.
+Then, open your browser and go to the [localhost](http://127.0.0.1:8000/) url.
 
 
 ## Authors
