@@ -26,21 +26,21 @@ class Customer(User):
 
 class Pet(models.Model):
     ILLNESS_CHOICES = [
-        ('Healthy', 'Healthy'),
-        ('Sick', 'Sick'),
-        ('In recovery', 'In recovery')
+        ('healthy', 'Healthy'),
+        ('sick', 'Sick'),
+        ('in_recovery', 'In recovery')
     ]
     ANIMAL_TYPE = [
-        ('Dog', 'Dog'),
-        ('Cat', 'Cat'),
-        ('Bird', 'Bird'),
-        ('Fish', 'Fish'),
-        ('Reptile', 'Reptile'),
-        ('Rodent', 'Rodent'),
-        ('Other', 'Other')
+        ('dog', 'Dog'),
+        ('cat', 'Cat'),
+        ('bird', 'Bird'),
+        ('fish', 'Fish'),
+        ('reptile', 'Reptile'),
+        ('rodent', 'Rodent'),
+        ('other', 'Other')
     ]
     name = models.CharField(max_length=100)
-    animal_type = models.CharField(max_length=100, choices=ILLNESS_CHOICES, default='Dog')
+    animal_type = models.CharField(max_length=100, choices=ANIMAL_TYPE, default='Dog')
     age = models.IntegerField()
     weight = models.IntegerField()
     illness = models.CharField(max_length=100, choices=ILLNESS_CHOICES, default='Healthy')
