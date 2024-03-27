@@ -40,7 +40,7 @@ class Pet(models.Model):
         ('Other', 'Other')
     ]
     name = models.CharField(max_length=100)
-    animal_type = models.CharField(max_length=100, choices=ILLNESS_CHOICES, default='Dog')
+    animal_type = models.CharField(max_length=100, choices=ANIMAL_TYPE, default='Dog')
     age = models.IntegerField()
     weight = models.IntegerField()
     illness = models.CharField(max_length=100, choices=ILLNESS_CHOICES, default='Healthy')
