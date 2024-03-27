@@ -35,7 +35,7 @@ cd MDP_Delivery1
 3. Install the required packages
 
 ```bash
-pip install -r req.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -46,4 +46,10 @@ Execute the following command to start the server
 python manage.py runserver
 ```
 
-Then, open your browser and go to the [localhost](http://localhost:8000/) url.
+Then, open your browser and go to the [localhost](http://127.0.0.1:8080/) url.
+
+
+## Authors
+
+- [Fernández Espona, Sergi](https://github.com/SergiFn)
+- [Lamrabat, Abdellah](https://github.com/AbdeDevs)
